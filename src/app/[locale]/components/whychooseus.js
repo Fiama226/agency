@@ -20,7 +20,7 @@ const CARDS = [
         designation: "#Persuasion",
         content: (
             <p>
-                - Our design isn't just pretty—it's strategic. We prioritize user flow, clarity, and persuasive design to help drive engagement and results.
+                - Our design isn &apos t just pretty—it &apos s strategic. We prioritize user flow, clarity, and persuasive design to help drive engagement and results.
 
             </p>
         ),
