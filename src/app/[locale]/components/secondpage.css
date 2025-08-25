@@ -4,13 +4,7 @@
   font-weight: bold;
   
 }
-.secondText {
-  font-size: 30;
-  text-align: center;
-  width: 90%;
-  justify-self: center;
-  margin-bottom: 20;
-}
+
 
 @media screen and (max-width: 1224px) {
   .secondText {

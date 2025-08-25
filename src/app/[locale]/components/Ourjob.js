@@ -6,16 +6,22 @@ import { useMediaQuery } from 'react-responsive'
 import { useTranslations } from 'next-intl';
 import './Ourjob.css'
 import Particles from './realParticle';
+import { usePathname } from 'next/navigation'
 
 
+const domainFr = ["⚖️ Cabinets d'avocats  🏛️ Services gouvernementaux et portails publics   ✈️ Agences de voyage  🍽️ Restaurants et cafés  📐👷🏻‍♀️ Cabinets d'architecture  🥳 Organisateurs d'événements  🛠️ Services automobiles  💰 Cabinets comptables et fiscaux  🙏 Groupes religieux et églises  🎓 Établissements d'enseignement  📝 Assureurs 👨🏻‍💻 Cabinets de recrutement et agences d'intérim  🌱 Organisations environnementales  📦 Entreprises de logistique et de transport", "🛒 Boutiques en ligne  🏋🏽 Fitness et coaching personnel  🏠 Agences immobilières  🐶 Services de soins pour animaux  🫂 ONG et organisations à but non lucratif  💇🏻‍♀️ Salons de beauté et spas  📈 Applications d'investissement et de technologie financière  🏭 Entreprises manufacturières  Centres communautaires et programmes de sensibilisation  🛠️ Services de réparation à domicile(plombiers, électriciens)  🚢 Entreprises d'import/export  📰 Journaux locaux et magazines numériques Galeries d'art et musées  Startups dans tous les secteurs, clubs sociaux et groupes de loisirs,🚗 Concessionnaires automobiles,🏗️Entreprises de construction"]
 
-const domain =
-    ["⚖️Law firms  🏛️ Government services & public portals  ✈️ Travel agencies  🍽️ Restaurants & cafes  📐👷🏻‍♀️ Architecture firms  🥳 Event planners  🛠️ Automotive services  💰 Accounting & tax firms  🙏 Religious groups & churches  🎓 Educational institutions  📝 Insurance providers  👨🏻‍💻 Recruitment & staffing firms  🌱 Environmental organizations  📦 Logistics & shipping companies", "🛒 E-commerce stores  🏋🏽 Fitness & personal training  🏠 Real estate companies  🐶 Pet care services  🫂 NGO & nonprofit organizations  💇🏻‍♀️ Beauty salons & spas  📈 Investment & fintech apps  🏭 Manufacturing firms  Community centers & outreach programs  🛠️ Home repair services (plumbers, electricians)  🚢 Import/export companies  📰 Local newspapers & digital magazines Art galleries & museums  Startups in any industry, Social clubs & hobby groups,🚗 Car dealerships,🏗️Construction companies"]
+const domainEn =
+    ["⚖️Law firms  🏛️ Government services & public portals  ✈️ Travel agencies  🍽️ Restaurants & cafes  📐👷🏻‍♀️ Architecture firms  🥳 Event planners  🛠️ Automotive services  💰 Accounting & tax firms  🙏 Religious groups & churches  🎓 Educational institutions  📝 Insurance providers  👨🏻‍💻 Recruitment & staffing firms  🌱 Environmental organizations  📦 Logistics & shipping companies", "🛒 E-commerce stores  🏋🏽 Fitness & personal training  🏠 Real estate companies  🐶 Pet care services  🫂 NGO & nonprofit organizations  💇🏻‍♀️ Beauty salons & spas  📈 Investment & fintech apps  🏭 Manufacturing firms  Community centers & outreach programs  🛠️ Home repair services (plumbers, electricians)  🚢 Import/export companies  📰 Local newspapers & digital magazines Art galleries & museums  Startups in any industry, Social clubs & hobby groups,🚗 Car dealerships,🏗️Construction companies"];
 
 
 
 function Ourjob() {
     const t = useTranslations('fouthPage');
+    const pathname = usePathname()
+    const domain = pathname === '/en' ? domainEn : domainFr
+
+
 
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 

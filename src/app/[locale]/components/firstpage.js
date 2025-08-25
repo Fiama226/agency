@@ -7,16 +7,22 @@ import { useMediaQuery } from 'react-responsive'
 import { useTranslations } from 'next-intl';
 import { useRef, useEffect } from 'react';
 
+const TextTodisplay = () => {
+    const t = useTranslations("firstPage");
+    return (
+        <div className='absolute top-5/15 ml-[calc(15dvw-50px)] text-white w-1/2'>
+            <h1 className='text-xl font-extrabold uppercase text-indigo-900 lg:text-6xl pb-5'>DIGITAL STATION</h1>
+            <p className='text-sm lg:text-2xl w-1/2'>{t("description")}</p>
+        </div>
+    )
+}
+
 
 
 
 
 function Firstpage() {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-    const t = useTranslations('firstPage');
-
-
-
+    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
     const videoRef = useRef(null);
 
     useEffect(() => {
@@ -29,17 +35,10 @@ function Firstpage() {
         }
     }, []);
 
-    const handleUserPlay = () => {
-        const video = videoRef.current;
-        if (video) {
-            video.play();
-        }
-    };
-
 
     return (
-        <div className="relative w-full h-full overflow-hidden" style={{ width: "100vw" }}>
-            {isTabletOrMobile ? <Hyperspeed
+        <div className="relative w-screen h-screen overflow-hidden" style={{ width: "100dvw" }} >
+            {isMobile ? <Hyperspeed
                 effectOptions={{
                     onSpeedUp: () => { },
                     onSlowDown: () => { },
@@ -87,7 +86,7 @@ function Firstpage() {
             />
             }
 
-            {!isTabletOrMobile ?
+            {!isMobile ?
 
                 <div
                     style={{
@@ -138,28 +137,9 @@ function Firstpage() {
 
             />
 
-            {!isTabletOrMobile ?
+            <TextTodisplay />
 
 
-                <div style={{ position: 'relative', marginLeft: "10vw", width: "35vw", height: "100vh", zIndex: 1, alignItems: 'center', placeItems: "center", alignContent: "center" }}>
-                    <p style={{ color: "rgb(255, 255, 255)", fontSize: "75px", fontWeight: "bold" }}>Digital Station</p>
-
-                    <p style={{ color: "rgb(255, 255, 255)", fontSize: "1.5vw", width: "30vw" }}>{t("description")}</p>
-
-
-
-
-
-                </div> : <div style={{ position: 'relative', marginLeft: "10vw", width: "50vw", height: "100vh", zIndex: 1, display: "flex", flexDirection: "column", transform: "translate(40%, 5%)" }}>
-                    <p style={{ color: "rgb(255, 255, 255)", fontSize: "40px", fontWeight: "bold", marginTop: "70px", lineHeight: 1 }}>Digital Station</p>
-
-                    <p style={{ color: "rgb(255, 255, 255)", fontSize: "15px", textAlign: "center" }}>{t("description")}</p>
-
-
-
-
-
-                </div>}
         </div>
     )
 }

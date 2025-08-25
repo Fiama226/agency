@@ -9,7 +9,13 @@
  "thirdPage": {
     "title": "NOUS SOMMES DIGITAL STATION",
     "description": "Nous concevons et développons des sites web, des applications et des expériences numériques qui aident nos clients à se développer, à innover et à se transformer. Nous écoutons, apprenons et comprenons avant de créer. Nous identifions ensemble vos objectifs, puis nous utilisons notre expertise pour trouver le juste équilibre entre réalisme et impact."
-}
+},
+    "beforeFourthPage":{
+        "whyUs":"Pourquoi nous choisir ?",
+        "speech":"À l'ère numérique actuelle, toute entreprise a besoin d'un site web pour se développer, se connecter et être compétitive. Chez Digital Station, nous concevons des sites web et des applications modernes qui suivent les dernières tendances et donnent des résultats concrets. Avec nous, votre présence numérique devient votre plus grand atout commercial.",
+        "director":"Notre P.D.G"
+    }
+
 ,
     "fouthPage": {
     "think": "NOUS RÉFLÉCHISSONS AVEC VOUS",

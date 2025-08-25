@@ -11,6 +11,13 @@
     "description": " We design and develop websites, apps and digital experiences that help our clients grow, innovate, and transform. We listen, learn and understand before we build. We identify your goals together, then use our expertise to find that sweet spot of realistic and impactful."
 }
 ,
+"beforeFourthPage":{
+        "whyUs":"Why choose us ?",
+        "speech":"In today’s digital age, every business needs a website to grow, connect, and compete. At Digital Station, we design modern websites and apps that follow the latest trends and deliver real results. With us, your digital presence becomes your strongest business advantage",
+        "director":"Our C.E.O"
+    }
+
+,
     "fouthPage": {
     "think": "WE THINK WITH YOU",
     "think1": "Innovation Strategy",
