@@ -37,7 +37,7 @@ function Secondpage() {
 
                 }}
             >
-                <source src="/videos/2ndpage.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/dxvnon94f/video/upload/v1756182043/2ndpage.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 

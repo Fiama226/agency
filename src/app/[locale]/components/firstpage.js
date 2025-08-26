@@ -7,12 +7,21 @@ import { useMediaQuery } from 'react-responsive'
 import { useTranslations } from 'next-intl';
 import { useRef, useEffect } from 'react';
 
-const TextTodisplay = () => {
+const TextTodisplaybigscreen = () => {
     const t = useTranslations("firstPage");
     return (
-        <div className='absolute top-5/15 ml-[calc(15dvw-50px)] text-white w-1/2'>
-            <h1 className='text-xl font-extrabold uppercase text-indigo-900 lg:text-6xl pb-5'>DIGITAL STATION</h1>
+        <div className='absolute top-5/15 ml-[calc(15dvw-50px)] text-white w-1/2 '>
+            <h1 className='font-extrabold uppercase text-indigo-900 lg:text-6xl md:text-10xl pb-5'>DIGITAL STATION</h1>
             <p className='text-sm lg:text-2xl w-1/2'>{t("description")}</p>
+        </div>
+    )
+}
+const TextTodisplaysmall = () => {
+    const t = useTranslations("firstPage");
+    return (
+        <div className='absolute mt-25 w-full text-center text-white justify-center bg-white/30 backdrop-blur-md mr-10 '>
+            <h1 className='font-extrabold uppercase text-indigo-900 text-5xl '>DIGITAL STATION</h1>
+            <p className='text-lg m-4 '>{t("description")}</p>
         </div>
     )
 }
@@ -23,6 +32,7 @@ const TextTodisplay = () => {
 
 function Firstpage() {
     const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+    const TextTodisplay = isMobile ? TextTodisplaysmall : TextTodisplaybigscreen
     const videoRef = useRef(null);
 
     useEffect(() => {
@@ -124,18 +134,19 @@ function Firstpage() {
                             left: "0px",
                         }}
                     >
-                        <source src="/videos/background.mp4" type="video/mp4" />
+                        <source src="https://res.cloudinary.com/dxvnon94f/video/upload/v1756182034/background.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 : null}
-            <Orb
-                hoverIntensity={0.5}
-                rotateOnHover={true}
-                hue={0}
-                forceHoverState={false}
+            {!isMobile ?
+                <Orb
+                    hoverIntensity={0.5}
+                    rotateOnHover={true}
+                    hue={0}
+                    forceHoverState={false}
 
-            />
+                /> : null}
 
             <TextTodisplay />
 

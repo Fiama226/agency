@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
@@ -42,10 +43,12 @@ export default async function LocaleLayout({
 
       >
          <NextIntlClientProvider>
-        <Image src={"/logo.png"} alt="logo" width={500} height={500} style={{position:"fixed",marginLeft:-20,top:0,left:0,backgroundColor:"transparent",zIndex:500,width:"12rem",height:"3rem"}} />
+
+        <Image src={"https://res.cloudinary.com/dxvnon94f/image/upload/v1756182029/logo.png"} alt="logo" width={500} height={500} style={{position:"fixed",marginLeft:-20,top:0,left:0,backgroundColor:"transparent",zIndex:500,width:"12rem",height:"3rem"}} />
         <div style={{position:"fixed",bottom:15,left:15,zIndex:500}}>
           <Contactsbanner />
         </div>
+        <SpeedInsights />
         {children}
         </NextIntlClientProvider>
       </body>

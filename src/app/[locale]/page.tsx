@@ -27,7 +27,7 @@ export default function Home() {
         <hr className="w-full md:border-2 border-gold" />
     </div>
     <div className="flex justify-center items-center py-4 capitalize">
-<h4 className="text-white sm:text-xl font-smibold text-lg"> Saaba ,Ouagadougou,Burkina-Faso | 70719366</h4> 
+<address className="text-white sm:text-xl font-smibold text-lg"> Saaba ,Ouagadougou,Burkina-Faso | 70719366</address> 
 </div>
 
     <div className="flex justify-center items-center py-4 capitalize">
