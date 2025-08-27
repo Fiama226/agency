@@ -8,6 +8,8 @@ import Contactsbanner from "./components/Contactsbanner";
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import Script from 'next/script';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -51,6 +53,10 @@ export default async function LocaleLayout({
         </div>
         <SpeedInsights />
         <Analytics />
+              <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=123"
+      />
         {children}
         </NextIntlClientProvider>
       </body>

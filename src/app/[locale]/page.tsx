@@ -7,13 +7,15 @@ import SixthPage from "./components/sixthPage";
 
 export default function Home() {
   return (
-    <div className="relative w-screen ">
+    <div className="relative w-screen flex flex-col ">
       <Firstpage/>
       <Secondpage/> 
       <Thirdpage/> 
       <Fourthpage/>
-      <Ourjob />
+       <Ourjob />
+      
       <SixthPage />
+     
 
 <footer>
 

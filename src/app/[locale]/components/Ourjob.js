@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import Image from 'next/image'
 import ScrollVelocity from './ScrollVelocity';
 import { useMediaQuery } from 'react-responsive'
@@ -26,7 +25,7 @@ function Ourjob() {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
     return (
-        <div style={{ width: "100vw", justifyContent: "center", display: "flex", flexDirection: "column", justifySelf: "center", overflow: "hidden", paddingTop: "150px" }} >
+        <div className="bg-gray-800 w-screen justify-center flex flex-col pt-20" >
             <Particles />
 
             <div style={{ width: "90vw", justifySelf: "center", display: "flex", flexDirection: isTabletOrMobile ? "column" : "row", overflow: "hidden", alignItems: "center", alignSelf: 'center', placeSelf: "center" }}>

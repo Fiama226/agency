@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import Particles from "./Particles";
 import Orb from './Orb';
 import Hyperspeed from './Hyperspeed';
@@ -47,7 +46,7 @@ function Firstpage() {
 
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden" style={{ width: "100dvw" }} >
+        <div className="relative w-screen h-screen overflow-hidden bg-gray-900" style={{ width: "100dvw" }} >
             {isMobile ? <Hyperspeed
                 effectOptions={{
                     onSpeedUp: () => { },

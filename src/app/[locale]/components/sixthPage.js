@@ -1,17 +1,15 @@
 "use client"
-import React from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image';
-
+import { useMediaQuery } from 'react-responsive'
 import "./sixthPage.css"
-
-
-
 
 function SixthPage() {
     const pathname = usePathname()
     const French = pathname === '/fr'
     console.log("the pathname of sixth page is:", pathname)
+    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+
 
     const data = [{
         title: "еCommеrcе",
@@ -43,24 +41,23 @@ function SixthPage() {
 
     ]
     return (
-        <div className="relative w-full h-screen overflow-hidden ">
+        <div className="relative w-full h-screen  ">
             {/* Background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover"
-            >
-                <source src="/videos/sixthpage.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            {!isMobile ?
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                >
+                    <source src="/videos/sixthpage.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video> : null}
 
-            {/* Overlay (optional for dark effect) */}
-            <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Foreground Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-white flex flex-row items-center gap-15 flex-wrap">
+            <div className="relative  z-100 flex flex-col items-center justify-center h-full text-white flex flex-row items-center gap-15 flex-wrap">
 
 
                 {data.map((item, index) => (
