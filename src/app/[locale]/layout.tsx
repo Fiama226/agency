@@ -107,6 +107,7 @@ export default async function LocaleLayout({
       <head>
      
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="0aaXTUSrm_Gtk2SYIe84IJeGo7OIdUiJSubTn0YQ5pc" />
             <script
           type="application/ld+json"
           dangerouslySetInnerHTML={websiteJsonLd()}
