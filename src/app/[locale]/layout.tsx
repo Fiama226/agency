@@ -9,6 +9,7 @@ import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import Script from 'next/script';
+import Header from "./Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,8 @@ export default async function LocaleLayout({
   return (
     <html lang="en">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <Header />
+
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
