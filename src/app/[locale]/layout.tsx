@@ -40,6 +40,7 @@ export default async function LocaleLayout({
   }  
   return (
     <html lang="en">
+      <NextIntlClientProvider>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <Header />
 
@@ -48,7 +49,7 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
 
       >
-         <NextIntlClientProvider>
+         
 
         <Image src={"https://res.cloudinary.com/dxvnon94f/image/upload/v1756182029/logo.png"} alt="logo" width={500} height={500} style={{position:"fixed",marginLeft:-20,top:0,left:0,backgroundColor:"transparent",zIndex:500,width:"12rem",height:"3rem"}} />
         <div style={{position:"fixed",bottom:15,left:15,zIndex:500}}>
@@ -61,8 +62,9 @@ export default async function LocaleLayout({
         src="https://www.googletagmanager.com/gtag/js?id=123"
       />
         {children}
-        </NextIntlClientProvider>
+       
       </body>
+       </NextIntlClientProvider>
     </html>
   );
 }
