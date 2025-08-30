@@ -1,10 +1,6 @@
-'use client'
-import { useTranslations } from 'next-intl';
-
-function Secondpage() {
-    const t = useTranslations('secondPage');
-
-
+import { getTranslations } from 'next-intl/server';
+export default async function Secondpage({ params }) {
+    const t = await getTranslations('secondPage');
 
     return (
         <div className="relative w-full h-full overflow-hidden" style={{ backgroundColor: "#17181f", color: "white", justifyContent: "center", width: "100dvw" }}>
@@ -41,4 +37,3 @@ function Secondpage() {
     )
 }
 
-export default Secondpage

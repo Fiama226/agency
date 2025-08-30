@@ -1,7 +1,6 @@
-"use client";
-import React from 'react'
+import { getLocale } from 'next-intl/server';
 import { CardStack } from "../../components/ui/card-stack";
-import { usePathname } from 'next/navigation'
+
 
 
 const cardEn = [
@@ -188,21 +187,18 @@ const cardFr = [
 ]
 
 
-const Whychooseus = () => {
-    const pathname = usePathname()
-    console.log("the pathname is:", pathname)
-    const CARDS = pathname === '/en' ? cardEn : cardFr
+export default async function WhyChooseUs() {
+    const locale = await getLocale();
+     const isEn = locale === "en";
+  const cards = isEn ? cardEn : cardFr;
+    console.log("the language is",locale)
 
+    
 
     return (
-
-        <div style={{ color: "white" }}>
-            <div className="h-[30rem] flex items-center justify-center w-full">
-                <CardStack items={CARDS} offset={5} scaleFactor={0.1} />
-            </div>
+        <div className="h-[30rem] flex items-center justify-center w-full">
+            
+            <CardStack items={cards} offset={5} scaleFactor={0.1} />
         </div>
-
-    )
+    );
 }
-
-export default Whychooseus

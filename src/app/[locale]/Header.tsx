@@ -46,6 +46,7 @@ import { useTranslations } from 'next-intl';
 
 const Header = () => {
     const t = useTranslations("meta");
+    console.log("Translated title:", t("title"));
   return (
             <Head>
            <title>{t("title")}</title>

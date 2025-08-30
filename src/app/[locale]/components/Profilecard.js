@@ -1,13 +1,13 @@
-'use client'
-import styled from 'styled-components';
+
 import Image from 'next/image';
+import './Profilecard.css'
 import { useTranslations } from 'next-intl';
 
 
 const Profilecard = () => {
   const t = useTranslations("beforeFourthPage");
   return (
-    <StyledWrapper>
+    <div>
       <div className="Pcard">
         <button className="mail">
           <a href="mailto:landrykabore70719366@gmail.com"> <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width={20} height={16} x={2} y={4} rx={2} /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg> </a>
@@ -40,193 +40,9 @@ const Profilecard = () => {
           </div>
         </div>
       </div>
-    </StyledWrapper>
+    </div>
   );
 }
 
-const StyledWrapper = styled.div`
-  .Pcard {
-    width: 375px;
-    height: 600px;
-    background: white;
-    border-radius: 32px;
-    position: relative;
-    box-shadow: #604b4a30 0px 70px 30px -50px;
-    transition: all 0.5s ease-in-out;
-    margin:15px;
-  }
-
-  .Pcard .mail {
-    position: absolute;
-    right: 2rem;
-    top: 1.4rem;
-    background: transparent;
-    border: none;
-  }
-
-  .Pcard .mail svg {
-    stroke: #fbb9b6;
-    stroke-width: 3px;
-  }
-
-  .Pcard .mail svg:hover {
-    stroke: #f55d56;
-  }
-
-  .Pcard .profile-pic {
-    position: absolute;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    top: 3px;
-    left: 3px;
-    border-radius: 29px;
-    z-index: 1;
-    border: 0px solid #fbb9b6;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
-  }
-
-  .Pcard .profile-pic img {
-    -o-object-fit: fill;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    -o-object-position: 0px 0px;
-    object-position: "center";
-    transition: all 0.5s ease-in-out 0s;
-  }
-
-  .Pcard .profile-pic img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: 0px 0px;
-    object-position: 0px 0px;
-    transform-origin: 45% 20%;
-    transition: all 0.5s ease-in-out 0s;
-  }
-
-  .Pcard .bottom {
-    position: absolute;
-    bottom: 2px;
-    left: 3px;
-    right: 3px;
-    background: #fbb9b6;
-    top: 80%;
-    border-radius: 29px;
-    z-index: 2;
-    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
-
-  .Pcard .bottom .content {
-    position: absolute;
-    bottom: 160px;
-    left: 1.5rem;
-    right: 1.5rem;
-    height: 200px;
-  }
-
-  .Pcard .bottom .content .name {
-    display: block;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: bold;
-  }
-
-  .Pcard .bottom .content .about-me {
-    display: block;
-    font-size: 0.9rem;
-    color: white;
-    margin-top: 1rem;
-  }
-
-  .Pcard .bottom .bottom-bottom {
-    position: absolute;
-    bottom: 1rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .Pcard .bottom .bottom-bottom .social-links-container {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .Pcard .bottom .bottom-bottom .social-links-container svg {
-    height: 20px;
-    fill: white;
-    filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
-  }
-
-  .Pcard .bottom .bottom-bottom .social-links-container svg:hover {
-    fill: #f55d56;
-    transform: scale(1.2);
-  }
-
-  .Pcard .bottom .bottom-bottom .button {
-    background: white;
-    color: #fbb9b6;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.6rem;
-    padding: 0.4rem 0.6rem;
-    box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
-  }
-
-  .Pcard .bottom .bottom-bottom .button:hover {
-    background: #f55d56;
-    color: white;
-  }
-
-  .Pcard:hover {
-    border-top-left-radius: 55px;
-  }
-
-  .Pcard:hover .bottom {
-    top: 20%;
-    border-radius: 80px 29px 29px 29px;
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  }
-
-  .Pcard:hover .profile-pic {
-    width: 250px;
-    height: 250px;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0px;
-    left: 0px;
-    border-radius: 50%;
-    background-color:"#fbb9b6";
-    z-index: 3;
-    border: 7px solid #fbb9b6;
-    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
-    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
-  }
-
-  .Pcard:hover .profile-pic:hover {
-    transform: scale(1.3);
-    border-radius: 0px;
-  }
-
-  .Pcard:hover .profile-pic img {
-    width: 100%;
-    height: 100%;
-    -o-object-position: 0px 25px;
-    object-position: 0px 25px;
-    transition: all 0.5s ease-in-out 0.5s;
-  }
-
-  .Pcard:hover .profile-pic svg {
-    transform: scale(2.5);
-    transition: all 0.5s ease-in-out 0.5s;
-  }`;
 
 export default Profilecard;
