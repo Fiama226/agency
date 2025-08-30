@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-export default async function Secondpage({ params }) {
+export default async function Secondpage() {
     const t = await getTranslations('secondPage');
 
     return (
