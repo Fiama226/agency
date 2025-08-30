@@ -9,8 +9,13 @@ import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import Script from 'next/script';
+type Props = {
+  params: {
+    locale: string;
+  };
+};
 
-export async function generateMetadata({params}) {
+export async function generateMetadata({ params }: Props) {
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'Metadata'});
 
