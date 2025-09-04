@@ -68,10 +68,40 @@ export default async function LocaleLayout({
      
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="0aaXTUSrm_Gtk2SYIe84IJeGo7OIdUiJSubTn0YQ5pc" />
-    <meta name="description" content="Digitalstation est une agence digitale complète, experte en développement web/mobile, stratégie de marque et accompagnement digital." />
-    <title>DigitalStation | Agence de solutions numériques, technologies et conseil en transformation numérique</title>
-    <meta name="robots" content="index, follow"/>
-    <meta name="generator" content="Next js"></meta>
+    <meta name="description" content="Digitalstation est une agence digitale complète, experte en développement web/mobile, stratégie de marque et accompagnement digital.Nous développons des sites web et des applications mobiles évolutifs, optimisés pour le référencement naturel (SEO) et dotés d'un design moderne." />
+    <title>DigitalStation | Agence de developpement web , mobile , de solutions numériques, technologies et conseil en transformation numérique</title>
+<meta name="robots" content="index, follow" />    
+<meta name="generator" content="Next js"></meta>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Digitalstation",
+  "url": "https://digitlstation.it.com/fr",
+  "logo": "https://res.cloudinary.com/dxvnon94f/image/upload/v1756924566/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/landrydigital",
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+2266616962",
+    "contactType": "customer service",
+    "areaServed": "BF",
+    "availableLanguage": ["French", "English"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ouagadougou",
+    "addressRegion": "Centre",
+    "addressCountry": "BF"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "KANORE Pawendtaore Landry"
+  },
+  "description": "Digitalstation est une agence de développement et de conseil spécialisée dans les sites web, les applications web, les applications mobiles, etc. qui transforme des idées audacieuses en technologies rentables et prêtes à être commercialisées.Nous sommes spécialisés dans la résolution de défis commerciaux réels grâce à des solutions numériques sur mesure, conçues avec précision, basées sur les données et axées sur les résultats.Notre approche de développement est basée sur les données et tient compte du marché, ce qui garantit que chaque produit que nous créons a un impact mesurable et une valeur à long terme."
+}
+</script>
 
         </head>
          <NextIntlClientProvider>
