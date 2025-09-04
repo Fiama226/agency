@@ -41,7 +41,7 @@ function SixthPage() {
 
     ]
     return (
-        <div className="relative w-full h-screen  ">
+        <div className="relative w-full h-full pt-20 pb-20 bg-sky-700">
             {/* Background Video */}
             {!isMobile ?
                 <video

@@ -9,7 +9,7 @@ import { useRef, useEffect } from 'react';
 const TextTodisplaybigscreen = () => {
     const t = useTranslations("firstPage");
     return (
-        <div className='absolute top-5/15 ml-[calc(15dvw-50px)] text-white w-1/2 '>
+        <div className='absolute top-5/15 ml-[calc(12dvw-40px)] text-white w-1/2 '>
             <h1 className='font-extrabold uppercase text-indigo-900 lg:text-6xl md:text-10xl pb-5'>DIGITAL STATION</h1>
             <p className='text-sm lg:text-2xl w-1/2'>{t("description")}</p>
         </div>
@@ -18,7 +18,7 @@ const TextTodisplaybigscreen = () => {
 const TextTodisplaysmall = () => {
     const t = useTranslations("firstPage");
     return (
-        <div className='absolute mt-25 w-full text-center text-white justify-center bg-white/30 backdrop-blur-md mr-10 '>
+        <div className='flex flex-col relative mt-45 w-full text-center text-white justify-center bg-white/20 backdrop-blur-md rounded-3xl p-3 w-11/12' style={{ width: "90%", justifySelf: "center" }}>
             <h1 className='font-extrabold uppercase text-indigo-900 text-5xl '>DIGITAL STATION</h1>
             <p className='text-lg m-4 '>{t("description")}</p>
         </div>
@@ -46,7 +46,7 @@ function Firstpage() {
 
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden bg-gray-900" style={{ width: "100dvw" }} >
+        <div className="relative w-screen h-screen overflow-hidden bg-gray-900" >
             {isMobile ? <Hyperspeed
                 effectOptions={{
                     onSpeedUp: () => { },

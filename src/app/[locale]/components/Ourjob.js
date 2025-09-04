@@ -60,7 +60,7 @@ function Ourjob() {
 
                     />
 
-                    <h3
+                    <p
                         style={{
                             boxSizing: "inherit",
                             marginTop: "0px",
@@ -74,7 +74,7 @@ function Ourjob() {
                         }}
                     >
                         {t('think')}
-                    </h3>
+                    </p>
                     <ul style={{ boxSizing: "inherit", color: "white" }}>
                         <li>{t('think1')} </li>
                         <li>{t('think2')}</li>
@@ -114,7 +114,7 @@ function Ourjob() {
 
                     />
 
-                    <h3
+                    <p
                         style={{
                             boxSizing: "inherit",
                             marginTop: "0px",
@@ -128,7 +128,7 @@ function Ourjob() {
                         }}
                     >
                         {t('envision')}
-                    </h3>
+                    </p>
                     <ul style={{ boxSizing: "inherit", color: "white" }}>
                         <li>{t('envision1')}</li>
                         <li>{t('envision2')}</li>
@@ -166,7 +166,7 @@ function Ourjob() {
 
                     />
 
-                    <h3
+                    <p
                         style={{
                             boxSizing: "inherit",
                             marginTop: "0px",
@@ -180,7 +180,7 @@ function Ourjob() {
                         }}
                     >
                         {t('build')}
-                    </h3>
+                    </p>
                     <ul style={{ boxSizing: "inherit", color: "white" }}>
                         <li>{t('build1')}</li>
                         <li>{t('build2')}</li>
