@@ -72,36 +72,47 @@ export default async function LocaleLayout({
     <title>DigitalStation | Agence de developpement web , mobile , de solutions numériques, technologies et conseil en transformation numérique</title>
 <meta name="robots" content="index, follow" />    
 <meta name="generator" content="Next js"></meta>
-<script type="application/ld+json">
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Digitalstation",
-  "url": "https://digitlstation.it.com/fr",
-  "logo": "https://res.cloudinary.com/dxvnon94f/image/upload/v1756924566/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/landrydigital",
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+2266616962",
-    "contactType": "customer service",
-    "areaServed": "BF",
-    "availableLanguage": ["French", "English"]
+  "url": "https://digitalstation.it.com/fr",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://res.cloudinary.com/dxvnon94f/image/upload/v1756924566/logo.png",
+    "width": 500,
+    "height": 500
   },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61579090841259"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+22666616962",
+    "email": "contact@digitalstation.it.com",
+    "contactType": "Customer Service",
+    "areaServed": "Burkina Faso",
+    "availableLanguage": ["French", "English"]
+  }],
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Rue 28269,Tabtenga, Ouagadougou, Kadiogo, Burkina Fas ",
     "addressLocality": "Ouagadougou",
     "addressRegion": "Centre",
+    "postalCode": "10010",
     "addressCountry": "BF"
   },
   "founder": {
     "@type": "Person",
-    "name": "KANORE Pawendtaore Landry"
+    "name": "KABORE Pawendtaore Landry"
   },
-  "description": "Digitalstation est une agence de développement et de conseil spécialisée dans les sites web, les applications web, les applications mobiles, etc. qui transforme des idées audacieuses en technologies rentables et prêtes à être commercialisées.Nous sommes spécialisés dans la résolution de défis commerciaux réels grâce à des solutions numériques sur mesure, conçues avec précision, basées sur les données et axées sur les résultats.Notre approche de développement est basée sur les données et tient compte du marché, ce qui garantit que chaque produit que nous créons a un impact mesurable et une valeur à long terme."
-}
-</script>
+  "description": "Digitalstation est une agence de développement et de conseil spécialisée dans la création de sites web, d'applications web et mobiles. Nous transformons des idées audacieuses en solutions technologiques rentables, prêtes à être commercialisées. Notre approche, basée sur les données et adaptée au marché, garantit un impact mesurable et une valeur durable."
+}),
+  }}
+/>
 
         </head>
          <NextIntlClientProvider>
