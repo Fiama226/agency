@@ -13,7 +13,7 @@ function Fourthpage() {
 
             <div className='sm:w-1/2 w-full justify-center items-center flex flex-col' >
                 <HexagonBackground className="absolute inset-0 flex items-center justify-center  w-full h-full bg-gray-200 md:h-100vw " />
-                <h1 className='relative text-4xl font-extrabold text-white'> why Us ?</h1>
+                <h1 className='relative text-7xl font-extrabold text-white text-center'> pourquoi nous ?</h1>
                 <Whychooseus />
 
             </div>

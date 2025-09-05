@@ -18,7 +18,7 @@ const TextTodisplaybigscreen = () => {
 const TextTodisplaysmall = () => {
     const t = useTranslations("firstPage");
     return (
-        <div className='flex flex-col relative mt-45 w-full text-center text-white justify-center bg-white/20 backdrop-blur-md rounded-3xl p-3 w-11/12' style={{ width: "90%", justifySelf: "center" }}>
+        <div className='flex flex-col relative mt-45 text-center text-white bg-white/20 backdrop-blur-md rounded-3xl p-3 w-9/10 justify-self-center' style={{ width: "90%", left: "5%" }}>
             <h1 className='font-extrabold uppercase text-indigo-900 text-5xl '>DIGITAL STATION</h1>
             <p className='text-lg m-4 '>{t("description")}</p>
         </div>
