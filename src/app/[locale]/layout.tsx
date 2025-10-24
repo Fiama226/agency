@@ -8,28 +8,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Script from "next/script";
-import type { MetadataRoute } from "next";
-
-export function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://digitlstation.it.com/fr",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-  ];
-}
-export function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: "/private/",
-    },
-  };
-}
-
 export async function generateMetadata({
   params,
 }: {
